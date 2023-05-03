@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shopping Cart 2.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <a href="https://www.flaticon.com/br/icones-gratis/app-carteira" title="app carteira passes ícones"></a>
+    <script src="src/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="zoom">
+        <section class="img"></section>
+          <aside class="productInformation">
+            <button class="toClose">❌</button>
+            <section class="info"></section>
+            <section class="description"></section>
+          </aside>
+      </div>
+    <main>
+      <header class="header">
+        <div class="container-title">
+          <img src="./src/imgs/rico.png" class="logo" alt="logo carrinho de
+          compras">
+          <h1>shopping Cart</h1>
+        </div>
+        <div class="search">
+          <label for="search-input">
+            <input class="search-input" id="search-input" type="text" placeholder="Digite uma categoria de produtos"><button class="search-btn">🔍</button>
+          </label>
+          <p class="count">0</p>
+        </div>
+        <section class="hello"><h3>Fazer login</h3></section>
+        <div class="walletIcon">
+          <img src="./src/imgs/app-wallet-passes.png">
+          </div>
+        <img src="./src/imgs/carrinho-de-compras.png" id="carShop">
+        <!-- <i class="material-icons" id="carShop">shopping_cart</i> -->
+      </header>
+      <section class="container">
+        <section class="loginContainer">
+          <form action="" class="loginForm"><h2>Login</h2>
+            <label for="inputName">Nome</label>
+            <input type="text" class="inputName" placeholder="Digite seu Nome" id="inputName">
+            <label for="inputCEP">CEP</label>
+            <input type="text" class="cep-input" id="inputCEP" placeholder="Seu CEP">
+          <button class="cep-button cart-button">Entrar</button>
+          <span class="cart__address"></span>
+          </form>
+        </section>
+        <div>
+          <section class="walletContainer">
+            <h2>
+              Sua carteira digital
+              <!-- <p>Quanto mais compras finalizar, maior seu saldo para comprar!</p> -->
+            </h2>
+            <div class="walletSubContainer">
+              <div class="historyContainer">
+                <h3 id="walletH3">Histórico de compras</h3>
+                <div class="walletHistory"></div>
+                </div>
+              <div class="walletDados">
+                <p class="walletCash"></p>
+                <div class="walletButtons">
+                <button class="walletAddCash">Renovar Saldo</button>
+                </div>
+                <div id="walletAddressTitle">Endereço</div>
+                <p class="walletAddress"></p>
+                <button class="walletBack">Continuar comprando</button>
+              </div>
+            </div>
+          </section>
+      </div>
+        <section class="products"></section>
+        <section class="cart">
+          <div>
+          <ol class="cart__products">
+          </ol>
+          <p class="price" style="display: none;" >Subtotal <span>R$<span class="total-price">0</span></span></p>
+          </div>
+          <section class="cartAside">
+            <h2>Resumo da compra</h2>
+            <p class="cartAsideQuant"></p>
+            <p class="cartAsideTotal"></p>
+            <p class="cartAsidePag"></p>
+            <div>Endereço:</div>
+            <div class="cartAsideAddress"></div>
+            <div class="cartAsideButton">
+              <button class="finalizar">Finalizar compra</button>
+              <button class="continuar">Continuar comprando</button>
+            </div>
+          </section>
+        </section>
+      </section>
+  </main>
+  </body>
+</html>
+

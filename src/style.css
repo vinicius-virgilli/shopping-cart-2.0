@@ -1,0 +1,1014 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: fira code;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  
+}
+
+.header {
+  position: fixed;
+  background-image: linear-gradient(to right, rgb(0, 59, 2), rgb(0, 180, 9));
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  z-index: 2;
+  box-shadow: 0 0 10px rgb(0, 0, 0),
+    0 0 10px rgb(0, 132, 15),
+    0 0 0 rgb(30, 132, 2),
+    0 0 0.8rem -5px rgb(36, 163, 1),
+    0 0 2.4rem -5px rgb(3, 131, 3),
+    inset 0 0 0rem rgb(10, 149, 0);
+}
+
+#carShop:hover {
+  background-color: green;
+
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(3, 131, 3),
+    inset 0 0 2rem rgb(255, 255, 255);
+}
+
+#carShop {
+  margin: 0 70px 0 0;
+  width: 70px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 0 0.2rem rgb(50, 149, 1),
+    0 0 0.2rem rgb(35, 131, 0),
+    0 0 1.4rem -5px rgb(255, 255, 255),
+    0 0 0.8rem -5px rgb(255, 255, 255),
+    0 0 2.4rem -5px rgb(255, 255, 255),
+    inset 0 0 2rem rgb(255, 255, 255);
+}
+
+.walletIcon {
+  border-radius: 6px;
+  padding: 5px;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(3, 136, 12),
+    inset 0 0 2rem rgb(21, 57, 2);
+}
+
+.walletIcon img:hover {
+  cursor: pointer;
+  background-color: green;
+  transition: 0.3s;
+  box-shadow: 0 0 0.2rem rgb(34, 156, 0),
+    0 0 0.2rem rgb(24, 158, 0),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(3, 131, 3),
+    inset 0 0 2rem rgb(14, 165, 0);
+}
+
+.walletIcon img {
+  border-radius: 6px;
+  height: 57px;
+  background-color: white;
+}
+
+.count {
+  color: rgb(1, 111, 1);
+  font-weight: bold;
+  font-size: 19px;
+  position: absolute;
+  right: 94px;
+  top: 44.45px;
+  z-index: 2;
+}
+
+.container-title {
+  width: 330px;
+  margin-left: 5vw;
+  display: flex;
+  color: white;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(12, 187, 3),
+    inset 0 0 2rem rgb(3, 198, 0);
+    border-radius: 10px;
+    
+}
+
+.container-title h1 {
+  margin: 0 1.5vw 0 1vw;
+}
+
+.logo {
+  border-radius: 5px;
+  padding: 6px;
+  width: 80px;
+  margin-left: 1.55vw;
+}
+
+.title {
+  color: rgb(221, 221, 221);
+  font-size: 30px;
+  padding-left: 30px;
+}
+
+.search-input {
+  border-radius: 5px;
+  border: none white;
+  padding-left: 20px;
+  height: 40px;
+  width: 25vw;
+  box-sizing: border-box;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.search {
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.search-btn {
+  margin: 0;
+  padding: 3px 15px 3px 15px;
+  height: 40px;
+  color: rgb(65, 25, 127);
+  border-radius: 5px;
+  border-left: 2px solid rgba(2, 122, 14, 0.2);
+  border-bottom: none;
+  border-top: none;
+  border-right: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: green;
+  transition: 0.3s;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(12, 187, 3),
+    inset 0 0 2rem rgb(3, 198, 0);
+}
+
+.hello {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  width: 15vw;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 3;
+}
+
+.hello:hover {
+  transition: background-color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+  background-color: white;
+  color: green;
+}
+
+.container-cartTitle {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(243, 254, 255);
+  width: 13vw;
+  margin-right: 5vw;
+}
+
+.container-cartTitle span {
+  margin: 0;
+  z-index: 1;
+}
+
+.container-cartTitle .cart__title {
+  color: rgb(17, 167, 0);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.container {
+  margin: 120px 0 0 0;
+  background-color: aliceblue;
+}
+
+.title strong {
+  color: white;
+}
+
+.products {
+  padding-top: 20px;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  background-color: rgba(243, 243, 243, 0);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  width: 250px;
+  height: 340px;
+  padding: 13px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.product:hover {
+  transition: 0.6s;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgba(8, 183, 5, 0.668),
+    0 0 1.4rem -5px rgb(0, 165, 3),
+    0 0 0.8rem -5px rgb(3, 161, 6),
+    0 0 2.4rem -5px rgb(7, 167, 4),
+    inset 0 0 2rem rgb(255, 255, 255);
+}
+
+.product .product__id {
+  display: none;
+}
+
+.product__title {
+  display: -webkit-box;
+  color: rgb(57, 63, 71);
+  font-size: 12px;
+  margin-top: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.product .img__container {
+  width: 75%;
+  height: 100%;
+  max-height: 185px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.product .product__image {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product:hover .product__image {
+  transform: scale(1.1);
+}
+
+.product__price , .price span {
+  align-self: flex-start;
+  color: rgb(168, 169, 171);
+  font-size: 18px;
+  display: flex;
+  align-items: flex-end;
+  margin: 6px 0;
+  flex-grow: 1;
+}
+
+.price span {
+  margin: 0;
+  flex-grow: 0;
+  margin-left: 7px;
+}
+
+.product__price .product__price__value , .price span span , .price {
+  margin-left: 6px;
+  color: rgb(36, 36, 36);
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.product .product__add {
+  background-color: rgb(255, 255, 255);
+  color: rgb(45, 149, 0);
+  border: 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(34, 156, 0),
+    0 0 2.4rem -5px rgb(255, 255, 255),
+    inset 0 0 2rem rgb(236, 253, 237);
+}
+
+.product .product__add:hover {
+  background-color: rgb(4, 177, 30);
+  transition: 0.3s;
+  color: white;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(12, 187, 3),
+    inset 0 0 2rem rgb(3, 198, 0);
+}
+
+.cart {
+  height: 100vh;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  position: fixed;
+  box-sizing: border-box;
+  border-bottom-left-radius: 7px;
+  border: 1px solid rgb(240, 240, 240);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.cart__products {
+  box-shadow: 1px 5px 0 rgba(23, 135, 1, 0.2);
+  min-height: 53vh;
+  padding: 3vh 1vw 1vh 1vw;
+  width: 65vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  overflow-y: scroll;
+  box-shadow: 0 4px 15px rgba(rgb(0, 0, 0), green, blue, 0.25);
+}
+
+.cart__product {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.cart__product__info-container {
+  overflow-y: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cart__product__info-container .product__price {
+  justify-content: end;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.cart__product__remove {
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+  color: rgb(168, 169, 171);
+  transition: color 0.2s ease;
+}
+
+.cart__product:hover .cart__product__remove {
+  color: rgb(219, 46, 46);
+  border-radius: 5px;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 0, 0),
+    0 0 1.4rem -5px rgb(255, 0, 0),
+    0 0 0.8rem -5px rgb(255, 0, 0),
+    0 0 2.4rem -5px rgb(255, 0, 0),
+    inset 0 0 2rem rgb(255, 255, 255);
+}
+
+.cart__product__image-container {
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart__product__image-container img {
+  margin: 0;
+  min-width: 4vw;
+  min-height: 4vh;
+  max-width: 9vw;
+  max-height: 9vh;
+  position: absolute;
+  transition: opacity 0.5s ease;
+}
+
+.cart__product__image-container img:last-child {
+  opacity: 0;
+  margin: 0;
+  min-width: 5vw;
+  min-height: 5vh;
+  max-width: 5vw;
+  max-height: 5vh;
+}
+
+.cart__product__image-container:hover img:first-child {
+  opacity: 0;
+}
+
+.cart__product__image-container:hover img:last-child {
+  opacity: 1;
+}
+
+.cartAside {
+  padding: 20px;
+  width: 33.8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartAside h2 {
+  align-self: center;
+  margin-bottom: 50px;
+}
+
+.cartAside div {
+  text-align: center;
+  width: 90%;
+  margin-left: 1.5vh;
+  margin-bottom: 15px;
+}
+
+.cartAside p {
+  width: 90%;
+  margin-left: 1.5vh;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartAside p span {
+  margin-left: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.cartAsideButton {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.cartAside button {
+  align-self: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(45, 149, 0);
+  border: 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  width: 80%;
+  padding: 8px 10px;
+  border-radius: 5px;
+  margin: 3vh 0 2vh 1vh;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(34, 156, 0),
+    0 0 2.4rem -5px rgb(255, 255, 255),
+    inset 0 0 2rem rgb(236, 253, 237);
+}
+
+.cartAside button:hover {
+  background-color: rgb(4, 177, 30);
+  transition: 0.3s;
+  color: white;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(12, 187, 3),
+    inset 0 0 2rem rgb(3, 198, 0);
+}
+
+.cartAside .finalizar {
+  background-color: rgb(0, 124, 0);
+  color: rgb(255, 255, 255);
+  border: 0;
+  box-shadow: 0 0 0.2rem rgb(33, 125, 0),
+    0 0 0.2rem rgb(47, 142, 0),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(34, 156, 0),
+    0 0 2.4rem -5px rgb(0, 139, 2),
+    inset 0 0 2rem rgb(0, 123, 8);
+}
+
+.cartAside .finalizar:hover {
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s;
+  color: rgb(22, 119, 0);
+  box-shadow: 0 0 0.2rem rgb(33, 123, 0),
+    0 0 0.2rem rgb(21, 116, 0),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(12, 187, 3),
+    inset 0 0 2rem rgb(255, 255, 255);
+}
+
+.cart-button {
+  width: 250px;
+  height: 30px;
+  margin: 0 auto;
+  border: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: rgb(13, 106, 10);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.cart-button:hover {
+  background-color: rgb(4, 177, 30);
+  transition: 0.3s;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(12, 187, 3),
+    inset 0 0 2rem rgb(3, 198, 0);
+}
+
+.cep-input {
+  border-radius: 5px;
+  width: 300px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.cart__address {
+  height: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 1vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 158, 47);
+  box-shadow: inset 0 0 3px 1px rgb(155, 155, 155);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(240, 255, 237);
+  border: 3px solid rgb(0, 202, 20);
+}
+
+.productInformation {
+  display: flex;
+  flex-flow: column;
+  overflow-y: scroll;
+  position: fixed;
+  left: 57vw;
+  top: 10vh;
+  padding: 1vw;
+  width: 32vw;
+  max-height: 81vh;
+  box-shadow: 0 4px 9px rgb(4, 155, 14);
+  border-radius: 10px;
+}
+
+.zoom {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: rgba(243, 243, 243, 0);
+  display: flex;
+  justify-content: start;
+  position: fixed;
+  transition: 1s;
+  left: 5vw;
+  top: 3vh;
+  width: 85vw;
+  height: 94vh;
+  background-color: white;
+  z-index: 1;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(12, 187, 3),
+    inset 0 0 2rem rgb(255, 255, 255);
+}
+
+.zoom .img {
+  overflow-y: scroll;
+  justify-content: center;
+  width: 60%;
+  display: flex;
+  flex-flow: wrap;
+  padding: 4px;
+}
+
+.zoom img {
+  box-shadow: 3px;
+  margin: 9vh 0px;
+  min-height: 50vh;
+  max-height: 90vh;
+  min-width: 20vw;
+  max-width: 45vw;
+  border-radius: 10px;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(0, 0, 0),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(12, 187, 3),
+    inset 0 0 2rem rgb(255, 255, 255);
+}
+
+.zoom .info div {
+  margin-top: 1vh;
+  margin-bottom: 4vh;
+}
+
+.zoom .info section {
+  text-align: center;
+  margin: 2vh 0 1vh 0;
+}
+
+.zoom .info b {
+  font-size: 25px;
+}
+
+.zoom .info button {
+  align-self: auto;
+  display: block;
+  width: 100%;
+  height: 30px;
+  margin: 4vh auto;
+  border: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: rgb(13, 106, 10);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.zoom .info button:hover {
+  background-color: rgb(4, 177, 30);
+  transition: 0.3s;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(12, 187, 3),
+    inset 0 0 2rem rgb(3, 198, 0);
+}
+
+.zoom p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.zoom .toClose {
+  position: fixed;
+  top: 3.3vh;
+  right: 9.4vw;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  font-size: 20px;
+}
+
+.esconde {
+  transition: 1s;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+iframe {
+  border-radius: 10px;
+  margin-top: 7vh;
+  height: 60vh;
+  min-width: 40vw;
+  max-width: 70vw;
+}
+
+/* .show {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+} */
+
+.buscando {
+  margin: 0%;
+  display: flex;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, rgb(0, 59, 2), rgb(0, 180, 9));
+  color: white;
+}
+
+/* .erroDeBusca {
+  width: 400px;
+  height: 350px;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  box-shadow: 0 0 0.2rem rgb(0, 0, 0),
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(12, 187, 3),
+    inset 0 0 2rem rgb(40, 133, 0);
+} */
+
+main {
+  background-image: linear-gradient(to right, rgb(0, 59, 2), rgb(0, 180, 9));
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.loginContainer {
+  transition: opacity 0.5s ease-in-out;
+  top: 13vh;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right, rgb(0, 59, 2), rgb(0, 180, 9));
+  z-index: 1;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16vh;
+  color: white;
+}
+
+.loginForm h2 {
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+#inputCEP {
+  padding-left: 10px;
+  width: 110px;
+  margin-bottom: 30px;
+}
+
+.inputName {
+  padding-left: 10px;
+  border-radius: 5px;
+  width: 300px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.loginForm button {
+  color: white;
+  background-color: rgb(18, 165, 5);
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(255, 255, 255),
+    0 0 0.8rem -5px rgb(255, 255, 255),
+    0 0 2.4rem -5px rgb(18, 165, 5),
+    inset 0 0 2rem rgb(18, 165, 5);
+}
+
+.loginForm button:hover {
+  color: rgb(18, 165, 5);
+  background-color: white;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(255, 255, 255),
+    0 0 0.8rem -5px rgb(255, 255, 255),
+    0 0 2.4rem -5px rgb(255, 255, 255),
+    inset 0 0 2rem rgb(255, 255, 255);
+}
+
+.walletContainer {
+  color: white;
+  padding-top: 40px;
+  position: fixed;
+  height: 90vh;
+  transition: opacity 0.5s ease-in-out;
+  background-image: linear-gradient(to right, rgb(0, 59, 2), rgb(0, 180, 9));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.walletSubContainer {
+  display: flex;
+  justify-content: stretch;
+  width: 100vw;
+}
+
+.walletContainer h2 {
+  text-align: center;
+}
+
+.walletContainer h2 p {
+  font-size: 17px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, rgb(4, 31, 107), rgba(0, 80, 229, 0.975));
+}
+
+.walletDados {
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 40%;
+  margin: 50px 50px 0 0;
+  height: 60vh;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.walletDados p {
+  margin-left: 1.3vw;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.walletBack {
+  margin: 6vh;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(20, 134, 0);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(255, 255, 255),
+    0 0 0.8rem -5px rgb(255, 255, 255),
+    0 0 2.4rem -5px rgb(255, 255, 255),
+    inset 0 0 2rem rgb(255, 255, 255);
+}
+
+.walletBack:hover {
+  color: rgb(245, 245, 245);
+  background-color: rgb(0, 123, 12);
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(255, 255, 255),
+    0 0 0.8rem -5px rgb(255, 255, 255),
+    0 0 2.4rem -5px rgb(255, 255, 255),
+    inset 0 0 2rem rgb(5, 110, 0);
+}
+
+.walletAddCash {
+  margin: 6vh;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(18, 165, 5);
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(255, 255, 255),
+    0 0 0.8rem -5px rgb(255, 255, 255),
+    0 0 2.4rem -5px rgb(18, 165, 5),
+    inset 0 0 2rem rgb(18, 165, 5);
+}
+
+.walletAddCash:hover {
+  color: rgb(18, 165, 5);
+  background-color: white;
+  box-shadow: 0 0 0.2rem white,
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(255, 255, 255),
+    0 0 0.8rem -5px rgb(255, 255, 255),
+    0 0 2.4rem -5px rgb(255, 255, 255),
+    inset 0 0 2rem rgb(255, 255, 255);
+}
+
+.walletHistory {
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+  align-content: center;
+  width: 80%;
+  background-color: white;
+}
+
+.walletHistory h4 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.historyContainer  {
+  overflow-y: auto;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  width: 60%;
+  height: 60vh;
+  margin: 50px;
+  padding: 10px;
+}
+
+.hide {
+  opacity: 0;
+  height: 0vh;
+  width: 0vw;
+}
+
+.swal2-popup {
+  border-radius: 10px;
+  box-shadow: 0 0 0.2rem rgb(0, 0, 0),
+    0 0 0.2rem rgb(255, 255, 255),
+    0 0 1.4rem -5px rgb(53, 246, 0),
+    0 0 0.8rem -5px rgb(43, 197, 0),
+    0 0 2.4rem -5px rgb(12, 187, 3),
+    inset 0 0 2rem rgb(40, 133, 0);
+}
+
+@media screen and ( max-width : 1400px ) {
+
+  .cart {
+    height: 630px;
+  }
+}

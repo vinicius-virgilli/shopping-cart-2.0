@@ -1,0 +1,648 @@
+{
+  "stats": {
+    "suites": 12,
+    "tests": 18,
+    "passes": 18,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-26T18:53:49.091Z",
+    "end": "2023-04-26T18:54:18.358Z",
+    "duration": 29267,
+    "testsRegistered": 18,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f5b074a4-beb2-4763-9a42-8727acb112d3",
+      "title": "",
+      "fullFile": "cypress/e2e/project.cy.js",
+      "file": "cypress/e2e/project.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "83ac6e89-949b-4eeb-9532-23f342657a17",
+          "title": "Shopping Cart Project",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "a12bbc8a-13e3-45f2-83af-27657cced951",
+              "title": "1 - Desenvolva testes para atingir cobertura de 50% das funções e linhas do arquivo fetchFunctions",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Verifica a cobertura de testes unitários",
+                  "fullTitle": "Shopping Cart Project 1 - Desenvolva testes para atingir cobertura de 50% das funções e linhas do arquivo fetchFunctions Verifica a cobertura de testes unitários",
+                  "timedOut": null,
+                  "duration": 12006,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.getCoverage().its('fetchFunctions.functions.pct', {\n  timeout: 0\n}).should('be.gte', 50.00);\ncy.getCoverage().its('fetchFunctions.lines.pct', {\n  timeout: 0\n}).should('be.gte', 50.00);",
+                  "err": {},
+                  "uuid": "913e7442-b102-4e7f-8184-00313bf67ef0",
+                  "parentUUID": "a12bbc8a-13e3-45f2-83af-27657cced951",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "913e7442-b102-4e7f-8184-00313bf67ef0"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 12006,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "629e999b-4dc2-46dd-bf1a-be7482568bd0",
+              "title": "2 - Implemente a função fetchProductsList",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "fetchProductsList retorna um erro quando não é passado nenhum parâmetro",
+                  "fullTitle": "Shopping Cart Project 2 - Implemente a função fetchProductsList fetchProductsList retorna um erro quando não é passado nenhum parâmetro",
+                  "timedOut": null,
+                  "duration": 412,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "try {\n  await fetchProductsList();\n  throw new Error('A função não retornou um erro');\n} catch (err) {\n  if (err.message === 'A função não retornou um erro') throw err;\n  expect(err.message).to.be.equal('Termo de busca não informado');\n}",
+                  "err": {},
+                  "uuid": "76aa5a1a-efa5-4883-8921-d4e3995cb8c0",
+                  "parentUUID": "629e999b-4dc2-46dd-bf1a-be7482568bd0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "fetch é chamado com o endpoint correto ao executar fetchProductsList",
+                  "fullTitle": "Shopping Cart Project 2 - Implemente a função fetchProductsList fetch é chamado com o endpoint correto ao executar fetchProductsList",
+                  "timedOut": null,
+                  "duration": 303,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "fetchProductsList('computador');\nexpect(fetch).to.be.calledWith('https://api.mercadolibre.com/sites/MLB/search?q=computador');",
+                  "err": {},
+                  "uuid": "d4d52e0e-fe0b-46f3-9a15-b8bfc48bb164",
+                  "parentUUID": "629e999b-4dc2-46dd-bf1a-be7482568bd0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "fetchProductsList retorna os results da API",
+                  "fullTitle": "Shopping Cart Project 2 - Implemente a função fetchProductsList fetchProductsList retorna os results da API",
+                  "timedOut": null,
+                  "duration": 325,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.wrap(fetchProductsList('computador')).should('be.deep.equal', results);",
+                  "err": {},
+                  "uuid": "ff30cdb7-034e-4b9f-b234-d9ba1c568ab5",
+                  "parentUUID": "629e999b-4dc2-46dd-bf1a-be7482568bd0",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "76aa5a1a-efa5-4883-8921-d4e3995cb8c0",
+                "d4d52e0e-fe0b-46f3-9a15-b8bfc48bb164",
+                "ff30cdb7-034e-4b9f-b234-d9ba1c568ab5"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1040,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "1780e184-5e1d-4bce-bf13-967545f0bf53",
+              "title": "3 - Crie uma listagem de produtos",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Listagem de produtos",
+                  "fullTitle": "Shopping Cart Project 3 - Crie uma listagem de produtos Listagem de produtos",
+                  "timedOut": null,
+                  "duration": 621,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(PRODUCT_SELECTOR).should('exist').should('have.length', results.length).get(PRODUCT_TITLE).each(($el, index) => {\n  expect($el.text()).to.be.equal(results[index].title);\n});",
+                  "err": {},
+                  "uuid": "3c4be4d3-f3e4-4340-a6e3-355de414e4c6",
+                  "parentUUID": "1780e184-5e1d-4bce-bf13-967545f0bf53",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "3c4be4d3-f3e4-4340-a6e3-355de414e4c6"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 621,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "862365d4-6aaf-4f2c-8107-9865cd31fbff",
+              "title": "4 - Adicione um texto de `carregando` durante uma requisição à API",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Adicionar um texto de \"carregando\" durante uma requisição à API",
+                  "fullTitle": "Shopping Cart Project 4 - Adicione um texto de `carregando` durante uma requisição à API Adicionar um texto de \"carregando\" durante uma requisição à API",
+                  "timedOut": null,
+                  "duration": 3480,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(PROJECT_URL, {\n  onBeforeLoad(win) {\n    win.fetch = url => new Promise(resolve => {\n      setTimeout(() => {\n        fetchMock(url).then(resolve);\n      }, 1000);\n    });\n  }\n});\ncy.get(LOADING).should('be.visible').wait(3000);\ncy.get(LOADING).should('not.exist');",
+                  "err": {},
+                  "uuid": "dfd6036c-95ad-4f2a-b5bd-b2e0aed5e198",
+                  "parentUUID": "862365d4-6aaf-4f2c-8107-9865cd31fbff",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "dfd6036c-95ad-4f2a-b5bd-b2e0aed5e198"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3480,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "5e077ce9-82c8-4065-be30-d1b198391d97",
+              "title": "5 - Exiba um texto de `erro` caso a requisição à API falhe",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "O texto não deve ser exibido caso a requisição à API seja bem sucedida",
+                  "fullTitle": "Shopping Cart Project 5 - Exiba um texto de `erro` caso a requisição à API falhe O texto não deve ser exibido caso a requisição à API seja bem sucedida",
+                  "timedOut": null,
+                  "duration": 256,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(ERRO).should('not.exist');",
+                  "err": {},
+                  "uuid": "7923d053-2747-43d7-a052-34bb8d4c3665",
+                  "parentUUID": "5e077ce9-82c8-4065-be30-d1b198391d97",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Exibir um texto de \"erro\" caso a requisição à API falhe",
+                  "fullTitle": "Shopping Cart Project 5 - Exiba um texto de `erro` caso a requisição à API falhe Exibir um texto de \"erro\" caso a requisição à API falhe",
+                  "timedOut": null,
+                  "duration": 506,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(PROJECT_URL, {\n  onBeforeLoad(win) {\n    win.fetch.callsFake(() => Promise.reject(new Error('API is down')));\n  }\n});\ncy.get(ERRO).should('be.visible');",
+                  "err": {},
+                  "uuid": "00c73e16-f82e-426d-b1bd-75b15d6bfc89",
+                  "parentUUID": "5e077ce9-82c8-4065-be30-d1b198391d97",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "7923d053-2747-43d7-a052-34bb8d4c3665",
+                "00c73e16-f82e-426d-b1bd-75b15d6bfc89"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 762,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "c05aafee-30c9-4ddb-96d6-f0234e57d936",
+              "title": "6 - Desenvolva testes para atingir cobertura de 100% das funções e linhas do arquivo fetchFunctions",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Verifica a cobertura de testes unitários",
+                  "fullTitle": "Shopping Cart Project 6 - Desenvolva testes para atingir cobertura de 100% das funções e linhas do arquivo fetchFunctions Verifica a cobertura de testes unitários",
+                  "timedOut": null,
+                  "duration": 293,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.getCoverage().its('fetchFunctions.functions.pct', {\n  timeout: 0\n}).should('be.gte', 100.00);\ncy.getCoverage().its('fetchFunctions.lines.pct', {\n  timeout: 0\n}).should('be.gte', 100.00);",
+                  "err": {},
+                  "uuid": "5887ae8a-470a-46da-8b47-80031a051fa4",
+                  "parentUUID": "c05aafee-30c9-4ddb-96d6-f0234e57d936",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5887ae8a-470a-46da-8b47-80031a051fa4"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 293,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "55eeae19-e78f-4c51-899a-b045ca992951",
+              "title": "7 - Implemente a função `fetchProduct`",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "fetchProduct retorna um erro quando não é passado nenhum parâmetro",
+                  "fullTitle": "Shopping Cart Project 7 - Implemente a função `fetchProduct` fetchProduct retorna um erro quando não é passado nenhum parâmetro",
+                  "timedOut": null,
+                  "duration": 290,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "fetchProduct().then(() => done(new Error('A função não retornou um erro'))).catch(err => {\n  expect(err.message).to.be.equal('ID não informado');\n  done();\n});",
+                  "err": {},
+                  "uuid": "1057e129-b754-42de-ac29-9e9f2d15586d",
+                  "parentUUID": "55eeae19-e78f-4c51-899a-b045ca992951",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "fetch é chamado com o endpoint correto ao executar fetchProduct",
+                  "fullTitle": "Shopping Cart Project 7 - Implemente a função `fetchProduct` fetch é chamado com o endpoint correto ao executar fetchProduct",
+                  "timedOut": null,
+                  "duration": 284,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "fetchProduct('MLB1405519561');\nexpect(fetch).to.be.calledWith('https://api.mercadolibre.com/items/MLB1405519561');",
+                  "err": {},
+                  "uuid": "a5919bb1-5f1d-4970-a0b4-70ab8e9e597c",
+                  "parentUUID": "55eeae19-e78f-4c51-899a-b045ca992951",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "fetchProduct retorna os dados do produto",
+                  "fullTitle": "Shopping Cart Project 7 - Implemente a função `fetchProduct` fetchProduct retorna os dados do produto",
+                  "timedOut": null,
+                  "duration": 291,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const expectedResult = results.find(({\n  id\n}) => id === 'MLB1405519561');\ncy.wrap(fetchProduct('MLB1405519561')).should('be.deep.equal', _objectSpread(_objectSpread({}, expectedResult), {}, {\n  pictures\n}));",
+                  "err": {},
+                  "uuid": "afaea759-23f5-4994-ac4c-7a581a1fcc5a",
+                  "parentUUID": "55eeae19-e78f-4c51-899a-b045ca992951",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1057e129-b754-42de-ac29-9e9f2d15586d",
+                "a5919bb1-5f1d-4970-a0b4-70ab8e9e597c",
+                "afaea759-23f5-4994-ac4c-7a581a1fcc5a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 865,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "ec3d678a-91e8-4e12-bef3-8c7989c03aa5",
+              "title": "8 - Adicione o produto ao carrinho de compras",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Adicione o produto ao carrinho de compras",
+                  "fullTitle": "Shopping Cart Project 8 - Adicione o produto ao carrinho de compras Adicione o produto ao carrinho de compras",
+                  "timedOut": null,
+                  "duration": 1705,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.wait(1000);\naddToCart(36);\ncountCart(1);\ncy.get(CART_PRODUCTS).children().first().should('contain', results[36].title);",
+                  "err": {},
+                  "uuid": "5d699598-4bcc-4190-b273-cfc811007013",
+                  "parentUUID": "ec3d678a-91e8-4e12-bef3-8c7989c03aa5",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5d699598-4bcc-4190-b273-cfc811007013"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1705,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "9f6fabe1-a584-4471-92dc-4cd671fa903e",
+              "title": "9 - Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página",
+                  "fullTitle": "Shopping Cart Project 9 - Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página",
+                  "timedOut": null,
+                  "duration": 992,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const first = 36;\nconst last = 29;\naddToCart(first);\ncountCart(1);\ncy.get(CART_PRODUCTS).children().first().should('contain', results[36].title);\naddToCart(last);\ncountCart(2);\ncy.get(CART_PRODUCTS).children().last().should('contain', results[29].title);\ncy.reload();\ncy.get(CART_PRODUCTS).children().first().should('contain', results[36].title);\ncy.get(CART_PRODUCTS).children().last().should('contain', results[29].title);\ncountCart(2);",
+                  "err": {},
+                  "uuid": "1699c218-d764-4280-b136-98152e50e7df",
+                  "parentUUID": "9f6fabe1-a584-4471-92dc-4cd671fa903e",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1699c218-d764-4280-b136-98152e50e7df"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 992,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "7d0f48b7-1686-4014-a5d0-00e39c6841a5",
+              "title": "10 - Calcule o valor total dos itens do carrinho de compras de forma assíncrona",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Calcule o valor total dos itens do carrinho de compras de forma assíncrona",
+                  "fullTitle": "Shopping Cart Project 10 - Calcule o valor total dos itens do carrinho de compras de forma assíncrona Calcule o valor total dos itens do carrinho de compras de forma assíncrona",
+                  "timedOut": null,
+                  "duration": 1271,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "addToCart(5);\ncheckPrice(results, [5]);\naddToCart(42);\ncheckPrice(results, [5, 42]);\naddToCart(36);\ncheckPrice(results, [5, 42, 36]);\naddToCart(15);\ncheckPrice(results, [5, 42, 36, 15]);\ncy.get(CART_PRODUCTS).children().eq(1).click();\ncheckPrice(results, [5, 36, 15]);",
+                  "err": {},
+                  "uuid": "476e43c1-d848-4a4a-b850-59a766cb3153",
+                  "parentUUID": "7d0f48b7-1686-4014-a5d0-00e39c6841a5",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao atualizar a página, o carrinho deve continuar o mesmo",
+                  "fullTitle": "Shopping Cart Project 10 - Calcule o valor total dos itens do carrinho de compras de forma assíncrona Ao atualizar a página, o carrinho deve continuar o mesmo",
+                  "timedOut": null,
+                  "duration": 1250,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "addToCart(15);\ncheckPrice(results, [15]);\naddToCart(45);\ncheckPrice(results, [15, 45]);\ncy.reload();\ncheckPrice(results, [15, 45]);\ncy.get(CART_PRODUCTS).children().first().click();\ncheckPrice(results, [45]);\ncy.reload();\ncheckPrice(results, [45]);",
+                  "err": {},
+                  "uuid": "c98465e4-dc87-49d2-8342-f5343f623e85",
+                  "parentUUID": "7d0f48b7-1686-4014-a5d0-00e39c6841a5",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "476e43c1-d848-4a4a-b850-59a766cb3153",
+                "c98465e4-dc87-49d2-8342-f5343f623e85"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2521,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d2dd9658-09a6-4b5a-a807-72d2e6228daf",
+              "title": "11 - Implemente a função `getAddress`",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Verifica se o endereço é exibido após o CEP ser digitado",
+                  "fullTitle": "Shopping Cart Project 11 - Implemente a função `getAddress` Verifica se o endereço é exibido após o CEP ser digitado",
+                  "timedOut": null,
+                  "duration": 912,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(PROJECT_URL, {\n  onBeforeLoad(win) {\n    cy.spy(win.Promise, 'any');\n  }\n});\ncy.get(CEP_INPUT).type('01001000');\ncy.get(CEP_BUTTON).click();\ncy.get(ADDRESS_TEXT).should('have.text', 'Praça da Sé - Sé - São Paulo - SP');\ncy.window().its('Promise.any').should('be.called');",
+                  "err": {},
+                  "uuid": "55053f1b-22a1-4bc8-84f7-9229f206762e",
+                  "parentUUID": "d2dd9658-09a6-4b5a-a807-72d2e6228daf",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Verifica se a mensagem `CEP não encontrado` é exibida caso o CEP não exista",
+                  "fullTitle": "Shopping Cart Project 11 - Implemente a função `getAddress` Verifica se a mensagem `CEP não encontrado` é exibida caso o CEP não exista",
+                  "timedOut": null,
+                  "duration": 666,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(CEP_INPUT).type('00000000');\ncy.get(CEP_BUTTON).click();\ncy.get(ADDRESS_TEXT).should('have.text', 'CEP não encontrado');",
+                  "err": {},
+                  "uuid": "785cc1e6-642b-4522-8ee7-8c8b3e17d66d",
+                  "parentUUID": "d2dd9658-09a6-4b5a-a807-72d2e6228daf",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "55053f1b-22a1-4bc8-84f7-9229f206762e",
+                "785cc1e6-642b-4522-8ee7-8c8b3e17d66d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1578,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

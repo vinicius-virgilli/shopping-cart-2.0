@@ -8,3 +8,5 @@ Implementei as seguintes features:
 - Login
 - Contador de produtos no carrinho de compras
 - Efeito zoom com informações detalhadas dos produtos
+
+link para acessar: https://shopping-cart-vinicius-virgilli.surge.sh/
